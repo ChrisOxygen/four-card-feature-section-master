@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==mx811 {
+        @media only screen and (max-width: 50.68em) {
+            @content;
+        }
+
+        //811px
+    }
+
+    @if $breakpoint==mx835 {
+        @media only screen and (max-width: 52.1em) {
+            @content;
+        }
+
+        //835px
+    }
+}
+
+html {
+    /*its was 10px so we did 10/16 * 100 to get the percentage(16 is the default font size for browsers*/
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #FAFAFA;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 28rem) 1fr;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+    text-transform: capitalize;
+
+    @include respond(mx811) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+main {
+    grid-column: 2 / 5;
+    display: grid;
+    //width: 85vw;
+    grid-template-rows: 15rem 1fr;
+    min-height: 85vh;
+    padding: 2.5rem;
+}
+
+section.top {
+    text-align: center;
+
+    h1.top-header {
+        font-size: 3rem;
+        font-weight: 200;
+
+    }
+
+    h1.bottom-header {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    p.p-top {
+        width: 38rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 1.8rem;
+    }
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 0;
+    align-items: start;
+    justify-content: center;
+    grid-column-gap: .7rem;
+    padding-top: 1rem;
+
+    @include respond(mx811) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 2rem 1rem;
+    }
+}
+
+.sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.div_con {
+    width: 19rem;
+    min-height: 13rem;
+    background-color: white;
+    box-shadow: 3px 13px 27px -23px rgba(0, 0, 0, 0.55);
+    padding: 2.5rem;
+    border-radius: .5rem;
+    border-top: 4px solid red;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    @include respond(mx811) {
+        width: 32rem;
+    }
+
+    img {
+        width: 4rem;
+        margin-top: 2.3rem;
+        align-self: flex-end;
+        align-items: center;
+    }
+}
+
+.sky-blue-div {
+    border-top: 4px solid hsl(180, 62%, 55%);
+
+}
+
+.red-div {
+    border-top: 4px solid hsl(0, 78%, 62%);
+
+}
+
+.orange-div {
+    border-top: 4px solid hsl(34, 97%, 64%);
+
+}
+
+.blue-div {
+    border-top: 4px solid hsl(212, 86%, 64%);
+
+}

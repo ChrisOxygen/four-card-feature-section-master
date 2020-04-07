@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  /*its was 10px so we did 10/16 * 100 to get the percentage(16 is the default font size for browsers*/
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FAFAFA;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (28rem)[3] 1fr;
+      grid-template-columns: 1fr repeat(3, 28rem) 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: #4c4e61;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 50.68em) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15rem 1fr;
+      grid-template-rows: 15rem 1fr;
+  min-height: 85vh;
+  padding: 2.5rem;
+}
+
+section.top {
+  text-align: center;
+}
+
+section.top h1.top-header {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+section.top h1.bottom-header {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+section.top p.p-top {
+  width: 38rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.8rem;
+}
+
+.bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding: 0 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column-gap: .7rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 50.68em) {
+  .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem 1rem;
+  }
+}
+
+.sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.div_con {
+  width: 19rem;
+  min-height: 13rem;
+  background-color: white;
+  -webkit-box-shadow: 3px 13px 27px -23px rgba(0, 0, 0, 0.55);
+          box-shadow: 3px 13px 27px -23px rgba(0, 0, 0, 0.55);
+  padding: 2.5rem;
+  border-radius: .5rem;
+  border-top: 4px solid red;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 50.68em) {
+  .div_con {
+    width: 32rem;
+  }
+}
+
+.div_con img {
+  width: 4rem;
+  margin-top: 2.3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sky-blue-div {
+  border-top: 4px solid #45d3d3;
+}
+
+.red-div {
+  border-top: 4px solid #ea5353;
+}
+
+.orange-div {
+  border-top: 4px solid #fcaf4a;
+}
+
+.blue-div {
+  border-top: 4px solid #549ef2;
+}
+/*# sourceMappingURL=style.css.map */
